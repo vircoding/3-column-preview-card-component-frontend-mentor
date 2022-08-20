@@ -1,0 +1,110 @@
+/* Google Fonts https://fonts.google.com/ */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Custom Properties */
+:root {
+    --lexend-deca: 'Lexend Deca', sans-serif;
+    --big-shoulders-display: 'Big Shoulders Display', cursive;
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /* paragraphs */
+    --very-light-gray: hsl(0, 0%, 95%); /* background, headings, buttons */
+}
+
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* Standard Styles */
+body {
+    font-family: var(--lexend-deca);
+    font-size: 15px;
+    line-height: 1.7;
+    background-color: var(--very-light-gray);
+    padding: 90px 20%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Card */
+.card {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Card | Item */
+.card-item {
+    padding: 40px;
+    background-color: var(--item-color);
+}
+
+.item-icon {
+    display: block;
+}
+
+.item-title {
+    font-family: var(--big-shoulders-display);
+    color: var(--very-light-gray);
+    margin-top: 40px;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.item-paragraph {
+    color: var(--transparent-white);
+    font-size: 15px;
+    margin-top: 30px;
+}
+
+.item-cta {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--very-light-gray);
+    margin-top: 80px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: var(--item-color);
+}
+
+.sedans {
+    --item-color: var(--bright-orange);
+}
+
+.suvs {
+    --item-color: var(--dark-cyan);
+}
+
+.luxury {
+    --item-color: var(--very-dark-cyan);
+}
+
+/* Active States */
+.item-cta:hover {
+    color: var(--very-light-gray);
+    background-color: var(--item-color);
+    border: 2px solid var(--very-light-gray);
+}
+
+/* Mobile Design */
+@media (max-width: 720px) {
+    /* Standard Styles */
+    body {
+        padding: 90px 8%;
+    }
+    
+    /* Card */
+    .card {
+        flex-direction: column;
+    }
+
+    /* Card | Item */
+    .item-cta {
+        margin-top: 25px;
+    }
+}
